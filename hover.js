@@ -12,6 +12,7 @@ class Hover {
   }
   init() {
     this.createGrid();
+    this.addStyle();
   }
 
   toggle() {
@@ -66,7 +67,7 @@ class Hover {
 
     this.createTiles(this.columns * this.rows);
   }
-  addStyle(article) {
+  addStyle() {
     const styleElement = document.createElement("style");
     this.container.classList.add(this.containerId);
 
@@ -161,12 +162,14 @@ for (let i = 0; i < imgContainers.length; i++) {
   const container = imgContainers[i];
   const article = articles[i];
   const wrapper = document.createElement("div");
+
   wrapper.classList.add("tile-wrapper");
   wrapper.id = "tiles";
   container.appendChild(wrapper);
+
   const newHover = new Hover(container, wrapper, article);
   newHover.init();
-  newHover.addStyle();
+
   hovers.push(newHover);
 }
 window.onresize = function () {

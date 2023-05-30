@@ -77,8 +77,8 @@ img {
   /*
    inset: clamp(0.3px, 1.1% + 0.5px, 1.6px);
    */
-  inset: 0.5px;
-  inset: 1.1% + 0.4px;
+
+  inset: calc(1.1% + 0.4px);
   position: absolute;
 }
 
@@ -92,7 +92,7 @@ section {
   height: clamp(60svh, 200px + 65svh, 80svh);
 
   padding: 1rem;
-  gap: 0.1rem;
+  gap: 0.5rem;
 }
 
 body {
@@ -104,7 +104,6 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 @media (max-width: 48rem) {
